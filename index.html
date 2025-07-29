@@ -13,9 +13,9 @@
 <script>
     const params = new URLSearchParams(window.location.search);
     if (params.get('game') !== 'True') {
-        document.write('<div style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 2; font-weight: bold;">Get 100 to reveal the secret message!</div>');
+        document.write('<div class="secret" data-secret style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 2; font-weight: bold; font-size: 2em;">Get 100 to unlock the letter!</div>');
     } else {
-        document.write('<div style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 2; font-weight: bold;">You can continue playing now!</div>');
+        document.write('<div class="secret" data-secret style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 2; font-weight: bold; font-size: 2em;">Get 500 to unlock the secret phrase!</div>');
     }
 </script>
   <div class="world" data-world>
