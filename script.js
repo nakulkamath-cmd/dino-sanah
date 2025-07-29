@@ -87,7 +87,7 @@ function handleLose() {
   setTimeout(() => {
     const params = new URLSearchParams(window.location.search)
     if (score > 100 && !(params.get("game") === "True")) {
-      window.location.href = "duno-sanah/letter"
+      window.location.href = "dino-sanah/letter"
       return
     }
     document.addEventListener("keydown", handleStart, { once: true })
