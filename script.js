@@ -9,6 +9,7 @@ const SPEED_SCALE_INCREASE = 0.00001
 const worldElem = document.querySelector("[data-world]")
 const scoreElem = document.querySelector("[data-score]")
 const startScreenElem = document.querySelector("[data-start-screen]")
+const secretElem = document.querySelector("[data-secret]")
 
 setPixelToWorldScale()
 window.addEventListener("resize", setPixelToWorldScale)
@@ -69,6 +70,11 @@ function updateSpeedScale(delta) {
 function updateScore(delta) {
   score += delta * 0.01
   scoreElem.textContent = Math.floor(score)
+    if (score >= 500) {
+        if (secretElem) {
+            secretElem.textContent = "The Secret Phrase is : Nandhana Palace"
+        }
+    }
 }
 
 function handleStart() {
