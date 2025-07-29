@@ -85,9 +85,8 @@ function handleStart() {
 function handleLose() {
   setDinoLose()
   setTimeout(() => {
-    const params = new URLSearchParams(window.location.search)
     if (score > 100 && !(params.get("game") === "True")) {
-      window.location.href = "dino-sanah/letter"
+      window.location.href = "https://nakulkamath-cmd.github.io/dino-sanah/"
       return
     }
     document.addEventListener("keydown", handleStart, { once: true })
