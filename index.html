@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dino Sanah</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" type="module"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('game') !== 'True') {
+        document.write('<div style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 2; font-weight: bold;">Get 100 to reveal the secret message!</div>');
+    } else {
+        document.write('<div style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 2; font-weight: bold;">You can continue playing now!</div>');
+    }
+</script>
+  <div class="world" data-world>
+    <div class="score" data-score>0</div>
+    <div class="start-screen" data-start-screen>Press Any Key or Click Anywhere To Start</div>
+    <img src="imgs/ground.png" class="ground" data-ground>
+    <img src="imgs/ground.png" class="ground" data-ground>
+    <img src="imgs/dino-stationary.png" class="dino" data-dino>
+  </div>
+</body>
+</html>
