@@ -70,7 +70,7 @@ function updateSpeedScale(delta) {
 function updateScore(delta) {
   score += delta * 0.01
   scoreElem.textContent = Math.floor(score)
-    if (score >= 500) {
+    if (score >= 200) {
         if (secretElem) {
             secretElem.textContent = "The Secret Phrase is : Nandhana Palace"
         }
