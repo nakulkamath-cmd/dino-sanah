@@ -10,14 +10,6 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-<script>
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('game') !== 'True') {
-        document.write('<div class="secret" data-secret style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 2; font-weight: bold; font-size: 2em;">Get 100 to unlock the letter!</div>');
-    } else {
-        document.write('<div class="secret" data-secret style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 2; font-weight: bold; font-size: 2em;">Get 500 to unlock the secret phrase!</div>');
-    }
-</script>
   <div class="world" data-world>
     <div class="score" data-score>0</div>
     <div class="start-screen" data-start-screen>Press Any Key or Click Anywhere To Start</div>
