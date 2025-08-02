@@ -69,12 +69,6 @@ function updateSpeedScale(delta) {
 
 function updateScore(delta) {
   score += delta * 0.01
-  scoreElem.textContent = Math.floor(score)
-    if (score >= 200) {
-        if (secretElem) {
-            secretElem.textContent = "The Secret Phrase is : Nandhana Palace"
-        }
-    }
 }
 
 function handleStart() {
@@ -91,14 +85,10 @@ function handleStart() {
 function handleLose() {
   setDinoLose()
   setTimeout(() => {
-    if (score > 100 && !(params.get("game") === "True")) {
-      window.location.href = "https://nakulkamath-cmd.github.io/dino-sanah/letter"
-      return
-    }
     document.addEventListener("keydown", handleStart, { once: true })
     document.addEventListener("click", handleStart, { once: true })
     startScreenElem.classList.remove("hide")
-  }, 100)
+  }, 200)
 }
 
 
