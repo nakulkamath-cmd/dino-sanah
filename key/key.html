@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keydown Detector</title>
+</head>
+<body>
+  <pre id="output">Press any key…</pre>
+  <script>
+    document.addEventListener('keydown', function(event) {
+      const msg = [
+        `Type: ${event.type}`,
+        `Key: ${event.key}`,
+        `Code: ${event.code}`,
+        `Alt: ${event.altKey}`,
+        `Ctrl: ${event.ctrlKey}`,
+        `Shift: ${event.shiftKey}`,
+        `Meta: ${event.metaKey}`,
+        `Repeat: ${event.repeat}`
+      ].join(' | ');
+      document.getElementById('output').textContent = msg;
+      console.log(msg);
+    });
+  </script>
+</body>
+</html>
